@@ -1,3 +1,5 @@
+<div class="clients">
 {% for c in clients %}
-{{ c.name }}
+    <div class="preload-img" data-alt="{{ c.name }}" data-src="{{c.logo.file.url}}"></div>
 {% endfor %}
+</div>

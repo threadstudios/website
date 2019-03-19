@@ -34,6 +34,15 @@ module.exports = {
   debug: (req, res) => {
     res.send(cache);
   },
+  preview: (req, res, next) => {
+    const comp = cache.includes.find(comp => comp.id === req.params.id);
+    if(comp) {
+      req.content = {
+        components : [{c : comp.ct, v : comp.fields}]
+      };
+    }
+    return next();
+  },
   router: (req, res, next) => {
     const page = cache.core.find(p => p.url === req.originalUrl);
     if (page) {
@@ -41,5 +50,14 @@ module.exports = {
     }
     return next();
   },
-  webhook: (req, res) => {}
+  webhook: (req, res) => {
+    if(req.headers.THR === 'A67AKBAFBACBJSAXLF') {
+      this.fetch('page');
+      return res.send({
+        FETCHED : true
+      });
+    } else {
+      return res.sendStatus(401);
+    }
+  }
 };

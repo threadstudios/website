@@ -21,3 +21,19 @@ h2 {
     font-weight: 200;
     margin-bottom: 2rem;
 }
+
+.clients {
+    max-width: 90%;
+    margin: 4rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    > div {
+        padding: 1.2rem 2rem;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+        &.active {
+            opacity: 1;
+        }
+    }
+}

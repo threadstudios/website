@@ -16,15 +16,15 @@
     "typescript": "^3.3.3333"
   },
   "scripts": {
-    "precache": "parcel build --target=node ./src/scripts/precache.js -d ./dist/scripts/ && node -r source-map-support/register ./dist/scripts/precache.js",
+    "postinstall": "parcel build --target=node ./src/scripts/precache.js -d ./dist/scripts/ && node -r source-map-support/register ./dist/scripts/precache.js",
     "dev": "node ./src/scripts/dev.js",
-    "build:server": "parcel build --target=node ./src/server.js -d ./dist/server/",
+    "build": "parcel build --target=node ./src/server.js -d ./dist/server/",
     "pretty": "prettier --write \"**/*{js,ts}\" '!dist/**'"
   },
   "name": "thread-skelly",
   "version": "0.0.1",
   "description": "skeleton for thread apps",
-  "main": "./src/server.js",
+  "main": "./dist/server/server.js",
   "author": "Paul Westerdale",
   "license": "MIT"
 }

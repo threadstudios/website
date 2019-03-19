@@ -12,6 +12,7 @@ app.use(express.static(`${paths.base}/public`));
 if (process.env.APP_ENV === 'dev') {
     app.get("/debug", content.debug);
     app.get('/cf', content.webhook);
+    app.get('/preview/:id', content.preview);
 }
 
 app.get("/*", content.router);
