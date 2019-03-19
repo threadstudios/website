@@ -51,7 +51,7 @@ module.exports = {
     return next();
   },
   fetchSecondary : function() {
-    return await this.fetch('page');
+    this.fetch('page');
   },
   webhook: function (req, res) {
     if(req.get('THR') === 'A67AKBAFBACBJSAXLF') {
