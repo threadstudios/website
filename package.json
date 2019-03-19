@@ -21,6 +21,9 @@
     "build": "parcel build --target=node ./src/server.js -d ./dist/server/",
     "pretty": "prettier --write \"**/*{js,ts}\" '!dist/**'"
   },
+  "engines": {
+    "node": "11.1.0"
+  },
   "name": "thread-skelly",
   "version": "0.0.1",
   "description": "skeleton for thread apps",

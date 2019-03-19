@@ -5,5 +5,4 @@ node_modules
 yarn-error.log
 .env
 clients
-content/cache.json
 dist
