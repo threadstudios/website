@@ -33,9 +33,13 @@ h2 {
     align-items: center;
     flex-wrap: wrap;
     > div {
+        display: flex;
+        height: 12rem;
         padding: 1.2rem 2rem;
         opacity: 0;
         transition: opacity 0.3s ease-in-out;
+        justify-content: center;
+        align-items: center;
         &.active {
             opacity: 1;
         }
