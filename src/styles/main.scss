@@ -20,6 +20,9 @@ h2 {
     font-family: "Montserrat";
     font-weight: 200;
     margin-bottom: 2rem;
+    @include breakpoint(xs) {
+        font-size: 2rem;
+    }
 }
 
 .clients {
