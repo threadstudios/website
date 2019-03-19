@@ -19,7 +19,8 @@
     "postinstall": "parcel build --target=node ./src/scripts/precache.js -d ./dist/scripts/ && node -r source-map-support/register ./dist/scripts/precache.js",
     "dev": "node ./src/scripts/dev.js",
     "build": "parcel build --target=node ./src/server.js -d ./dist/server/",
-    "pretty": "prettier --write \"**/*{js,ts}\" '!dist/**'"
+    "pretty": "prettier --write \"**/*{js,ts}\" '!dist/**'",
+    "start": "node ./dist/server/server.js"
   },
   "engines": {
     "node": "11.1.0"
