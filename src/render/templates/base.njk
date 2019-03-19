@@ -1,0 +1,8 @@
+{% extends "./core.njk" %}
+
+{% block content %}
+    {% include "./component/nav.njk" %}
+    {% for c in data.components %}
+        {% component c %}
+    {% endfor %}
+{% endblock %}

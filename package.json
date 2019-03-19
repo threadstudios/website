@@ -1,0 +1,30 @@
+{
+  "dependencies": {
+    "css-reset-and-normalize": "^2.0.1",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "isomorphic-fetch": "^2.2.1",
+    "nunjucks": "^3.2.0",
+    "source-map-support": "^0.5.11"
+  },
+  "devDependencies": {
+    "chalk": "^2.4.2",
+    "parcel-bundler": "^1.12.2",
+    "prettier": "^1.16.4",
+    "sass": "^1.17.2",
+    "tree-kill": "^1.2.1",
+    "typescript": "^3.3.3333"
+  },
+  "scripts": {
+    "precache": "parcel build --target=node ./src/scripts/precache.js -d ./dist/scripts/ && node -r source-map-support/register ./dist/scripts/precache.js",
+    "dev": "node ./src/scripts/dev.js",
+    "build:server": "parcel build --target=node ./src/server.js -d ./dist/server/",
+    "pretty": "prettier --write \"**/*{js,ts}\" '!dist/**'"
+  },
+  "name": "thread-skelly",
+  "version": "0.0.1",
+  "description": "skeleton for thread apps",
+  "main": "./src/server.js",
+  "author": "Paul Westerdale",
+  "license": "MIT"
+}

@@ -1,0 +1,23 @@
+@import '../../node_modules/css-reset-and-normalize/scss/reset-and-normalize.scss';
+@import "./core/base.scss";
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:200,400');
+
+body {
+    color: #909090;
+    background: #FAFAFA;
+}
+
+.logo {
+    max-width: 26rem;
+    margin: 4rem auto 6rem auto;
+    display: block;
+}
+
+h2 {
+    font-size: 2.8rem;
+    text-align: center;
+    font-family: "Montserrat";
+    font-weight: 200;
+    margin-bottom: 2rem;
+}

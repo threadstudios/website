@@ -1,0 +1,9 @@
+.cache
+public/c*
+node_modules
+.DS_STORE
+yarn-error.log
+.env
+clients
+content/cache.json
+dist
