@@ -13,7 +13,6 @@ const cache = {
 
 module.exports = {
   fetch: async type => {
-    console.log(process.env.CF_URL);
     const url = `${process.env.CF_URL}/spaces/${
       process.env.CF_SPACE
     }/entries?access_token=${
@@ -51,9 +50,12 @@ module.exports = {
     }
     return next();
   },
+  fetchSecondary : function() {
+    return await this.fetch('page');
+  },
   webhook: function (req, res) {
     if(req.get('THR') === 'A67AKBAFBACBJSAXLF') {
-      this.fetch('page');
+      this.fetchSecondary();
       return res.send({
         FETCHED : true
       });
