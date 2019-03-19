@@ -11,7 +11,16 @@ app.use(express.static(`${paths.base}/public`));
 
 if (process.env.APP_ENV === 'dev') {
     app.get("/debug", content.debug);
-    app.get('/cf', content.webhook);
+    app.get('/cf', (req, res) => {
+      if(req.get('THR') === 'A67AKBAFBACBJSAXLF') {
+        content.fetch('page');
+        return res.send({
+          FETCHED : true
+        });
+      } else {
+        return res.sendStatus(401);
+      }
+    });
     app.get('/preview/:id', content.preview);
 }
 

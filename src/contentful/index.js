@@ -49,18 +49,5 @@ module.exports = {
       req.content = page;
     }
     return next();
-  },
-  fetchSecondary : function() {
-    this.fetch('page');
-  },
-  webhook: function (req, res) {
-    if(req.get('THR') === 'A67AKBAFBACBJSAXLF') {
-      this.fetchSecondary();
-      return res.send({
-        FETCHED : true
-      });
-    } else {
-      return res.sendStatus(401);
-    }
   }
 };
