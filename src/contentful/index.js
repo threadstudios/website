@@ -51,8 +51,7 @@ module.exports = {
     return next();
   },
   webhook: (req, res) => {
-    console.log(req.headers);
-    if(req.headers.THR === 'A67AKBAFBACBJSAXLF') {
+    if(req.get('THR') === 'A67AKBAFBACBJSAXLF') {
       this.fetch('page');
       return res.send({
         FETCHED : true
