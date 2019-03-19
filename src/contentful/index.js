@@ -18,7 +18,6 @@ module.exports = {
     }/entries?access_token=${
       process.env.CF_KEY
     }&content_type=${type}&include=5`;
-    console.log(url);
     try {
       const result = await get(url);
       if (result.errors) return false;
@@ -53,6 +52,7 @@ module.exports = {
   },
   webhook: function (req, res) {
     if(req.get('THR') === 'A67AKBAFBACBJSAXLF') {
+      console.log(process.env);
       this.fetch('page');
       return res.send({
         FETCHED : true
