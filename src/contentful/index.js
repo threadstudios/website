@@ -50,7 +50,7 @@ module.exports = {
     }
     return next();
   },
-  webhook: (req, res) => {
+  webhook: function (req, res) {
     if(req.get('THR') === 'A67AKBAFBACBJSAXLF') {
       this.fetch('page');
       return res.send({
