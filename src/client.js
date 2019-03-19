@@ -12,7 +12,7 @@ if(clients.length) {
             fauxImage.src = item.dataset.src;
             fauxImage.onload = () => {
                 toLoad--;
-                delay += .3;
+                delay += .15;
                 item.style.transitionDelay = `${delay}s`;
                 imageSetters.push(() => {
                     item.append(fauxImage);
