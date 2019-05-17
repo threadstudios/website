@@ -7,19 +7,19 @@ if(clients.length) {
         let toLoad = items.length;
         let delay = 0;
         let imageSetters = [];
-        items.map((item) => {
+        items.forEach((item) => {
             const fauxImage = document.createElement('img');
             fauxImage.src = item.dataset.src;
+            delay += .15;
+            item.style.transitionDelay = `${delay}s`;
             fauxImage.onload = () => {
                 toLoad--;
-                delay += .15;
-                item.style.transitionDelay = `${delay}s`;
                 imageSetters.push(() => {
                     item.append(fauxImage);
                     item.classList.add('active');
                 })
                 if (toLoad === 0) {
-                    imageSetters.map(im => im());
+                    imageSetters.forEach(im => im());
                 }
             }
         })

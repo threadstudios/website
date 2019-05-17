@@ -15,14 +15,19 @@ var ComponentTag = function(env) {
   this.run = function(context, comp) {
     env.opts.autoescape = false;
     const data = typeof comp.v === 'object' ? comp.v : { v : comp.v }
-    const rendered = env.render(
-      path.resolve(
-        `${paths.src}/render/templates/component/${
-          comp.c
-        }.njk`
-      ),
-      data
-    );
+    let rendered = "";
+    try {
+      rendered = env.render(
+        path.resolve(
+          `${paths.src}/render/templates/component/${
+            comp.c
+          }.njk`
+        ),
+        data
+      );
+    } catch (e) {
+      console.error(e);
+    }
     return rendered;
   };
 };

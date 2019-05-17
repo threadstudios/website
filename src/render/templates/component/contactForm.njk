@@ -1,0 +1,12 @@
+<div class="contact">
+    <h2>{{ title }}</h2>
+    <p>{{ pretext }}</p>
+    {% for c in contactMethods %}
+        {% if (c.method == "Phone") %}
+            <a href="tel:{{c.value}}">{{c.value}}</a>
+        {% endif %}
+        {% if (c.method == "Email") %}
+            <a href="mailto:{{c.value}}">{{c.value}}</a>
+        {% endif %}
+    {% endfor %}
+</div>
