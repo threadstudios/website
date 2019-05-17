@@ -20,7 +20,7 @@ module.exports = {
     }&content_type=${type}&include=5`;
     try {
       const result = await get(url);
-      if (result.errors) return false;
+      if (result.errors) { console.log(result.errors); return false; };
       cache.includes = normalise.includes(result.includes);
       cache.core = result.items.map(item =>
         normalise[type](item, cache.includes)
