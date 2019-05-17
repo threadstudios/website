@@ -17,7 +17,7 @@
     "typescript": "^3.3.3333"
   },
   "scripts": {
-    "postinstall": "parcel build --target=node ./src/scripts/precache.js -d ./dist/scripts/ && node -r source-map-support/register ./dist/scripts/precache.js",
+    "heroku-postbuild": "parcel build --target=node ./src/scripts/precache.js -d ./dist/scripts/ && node -r source-map-support/register ./dist/scripts/precache.js",
     "dev": "node ./src/scripts/dev.js",
     "build": "parcel build --target=node ./src/server.js -d ./dist/server/ && parcel build ./src/client.js -d ./public --out-file c",
     "pretty": "prettier --write \"**/*{js,ts}\" '!dist/**'",
