@@ -10,7 +10,7 @@
   },
   "devDependencies": {
     "chalk": "^2.4.2",
-    "parcel-bundler": "^1.12.2",
+    "parcel-bundler": "^1.12.3",
     "prettier": "^1.16.4",
     "sass": "^1.17.2",
     "tree-kill": "^1.2.1",

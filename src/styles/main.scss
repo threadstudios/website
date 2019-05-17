@@ -39,6 +39,7 @@ h2 {
     margin-bottom: 2rem;
     @include breakpoint(xs) {
         font-size: 2rem;
+        padding: 0 8rem;
     }
 }
 
