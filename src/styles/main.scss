@@ -1,95 +1,100 @@
-@import '../../node_modules/css-reset-and-normalize/scss/reset-and-normalize.scss';
+@import "../../node_modules/css-reset-and-normalize/scss/reset-and-normalize.scss";
 @import "./core/base.scss";
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat:200,400|Lato:300');
+@import url("https://fonts.googleapis.com/css?family=Lato:300");
+@import url("https://use.typekit.net/pwr1dva.css");
 
 body {
-    color: #909090;
-    background: #FAFAFA;
-    font-family: "Lato";
-    font-weight: 300;
+  color: #909090;
+  background: #fafafa;
+  font-family: "Lato";
+  font-weight: 300;
 }
 
 a {
-    color: #FAFAFA;
-    text-decoration: none;
-    font-family: "Montserrat";
-    transition: color 0.2s ease-in-out;
-    &:visited, &:active, &:hover {
-        color: #EDEDED;
-    }
+  color: #fafafa;
+  text-decoration: none;
+  font-family: "Laca";
+  transition: color 0.2s ease-in-out;
+  &:visited,
+  &:active,
+  &:hover {
+    color: #ededed;
+  }
 }
 
 .logo {
-    max-width: 26rem;
-    margin: 4rem auto 12rem auto;
-    @include breakpoint(xs) {
-        margin: 4rem auto 6rem auto;
-    }
-    display: block;
+  max-width: 26rem;
+  margin: 4rem auto 12rem auto;
+  @include breakpoint(xs) {
+    margin: 4rem auto 6rem auto;
+  }
+  display: block;
 }
 
 @import "form.scss";
 
 h2 {
-    font-size: 2.8rem;
-    text-align: center;
-    font-family: "Montserrat";
-    font-weight: 200;
-    margin-bottom: 2rem;
-    @include breakpoint(xs) {
-        font-size: 2rem;
-        padding: 0 4rem;
-    }
+  font-size: 2.8rem;
+  text-align: center;
+  font-family: "Laca";
+  font-weight: 400;
+  margin-bottom: 2rem;
+  @include breakpoint(xs) {
+    font-size: 2rem;
+    padding: 0 4rem;
+  }
 }
 
 .clients {
-    max-width: 114rem;
-    margin: 16rem auto 12rem auto;
-    @include breakpoint(xs) {
-        margin: 8rem auto 6rem auto;
-    }
+  max-width: 114rem;
+  margin: 16rem auto 12rem auto;
+  @include breakpoint(xs) {
+    margin: 8rem auto 6rem auto;
+  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  > div {
     display: flex;
+    height: 12rem;
+    padding: 1.2rem 2rem;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
     justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    > div {
-        display: flex;
-        height: 12rem;
-        padding: 1.2rem 2rem;
-        opacity: 0;
-        transition: opacity 0.3s ease-in-out;
-        justify-content: center;
-        align-items: flex-end;
-        &.active {
-            opacity: 1;
-        }
-        img {
-            @include breakpoint(xs) {
-                max-width: 8rem;
-            }
-        }
+    align-items: flex-end;
+    &.active {
+      opacity: 1;
     }
+    img {
+      @include breakpoint(xs) {
+        max-width: 8rem;
+      }
+    }
+  }
 }
 
 .contact {
-    margin: 12rem auto 0 auto;
-    position: relative;
-    display: flex;
-    justify-items: center;
-    align-items: center;
-    padding: 8rem 26rem;
-    background: linear-gradient(#202020, #353535);
-    @include breakpoint(xs) {
-        padding: 8rem 2rem;
-    }
-    flex-direction: column;
-    text-align: center;
-    h2, p, form {
-        color: #DADADA;
-        z-index: 3;
-    }
-    p {
-        margin-bottom: 2rem;
-    }
+  margin: 12rem auto 0 auto;
+  position: relative;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  padding: 8rem 26rem;
+  background: linear-gradient(#202020, #353535);
+  @include breakpoint(xs) {
+    padding: 8rem 2rem;
+  }
+  flex-direction: column;
+  text-align: center;
+  h2,
+  p,
+  form {
+    color: #dadada;
+    z-index: 3;
+  }
+  p {
+    margin-bottom: 2rem;
+  }
 }

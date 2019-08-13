@@ -24,7 +24,7 @@
     "start": "node ./dist/server/server.js"
   },
   "engines": {
-    "node": "11.1.0"
+    "node": "12.5.0"
   },
   "name": "thread-skelly",
   "version": "0.0.1",
